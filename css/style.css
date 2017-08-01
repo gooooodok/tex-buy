@@ -220,7 +220,7 @@ q + .img {
 }
 .parallax01 {
   background-color: #FFF;
-  background-image: url(../images/texnika_fon_13.jpg);
+  background-image: url(../images/texnika_fon_14.jpg);
   padding: 210px 0 187px;
 }
 @media (max-width: 767px) {
@@ -408,13 +408,14 @@ header * + .row {
   padding: 0 0 4px;
 }
 .brand_slogan {
-  font-size: 10px;
-  line-height: 18px;
+  font-size: 12px;
+  line-height: 30px;
   font-weight: 300;
-  letter-spacing: 3.4px;
+  letter-spacing: 10px;
   text-transform: uppercase;
   color: #909086;
   margin: 0;
+  padding: 0px 0px 0px 10px;
 }
 /*========================================================
 					 CONTENT  Section
