@@ -18,8 +18,8 @@ if($_POST)
         $headers .= "From: <zagraychuk@gmail.com>\r\n";
         $result = mail($to, $subject, $message, $headers);
      
-        if ($result){
-            echo "Заявка успішно відправлена.";
+        if ($result) {
+            echo "Заявка успішно відправлена. Наші спеціалісти звяжутся з вами найближчим часом";
         }
     }
 

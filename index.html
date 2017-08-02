@@ -7,7 +7,7 @@
 	<meta name="Keywords" content=""/>
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="css/grid.css?ver=1">
-	<link rel="stylesheet" href="css/style.css?ver=10">
+	<link rel="stylesheet" href="css/style.css?ver=11">
 	<link rel="stylesheet" href="css/rd-mailform.css">
 
 	<script src="js/jquery.js"></script>
@@ -39,12 +39,6 @@
 		 document.getElementById(result_id).innerHTML = " Возникла ошибка при отправке формы. Попробуйте еще раз";
 		 }
 		 });
-		 
-		 $(':input','#formMain')
-		 .not(':button, :submit, :reset, :hidden')
-		 .val('')
-		 .removeAttr('checked')
-		 .removeAttr('selected');
 		 }
 	</script>
 </head>
@@ -67,7 +61,7 @@
 			<!--	<h4>Наша компанія займається Скупкою різних Б/В товарів: побутова техніка, меблі, ручні будівельні інструменти, товари для риболовлі та відпочинку, спорт товари та багато іншого.<h4><br>  -->
 				<div class="row">
 					<div class="preffix_4 grid_4">
-						<div id="messegeResult">Що бажаєте продати?</div>	
+					<h6>Що бажаєте продати?</h6>
 
 						<!-- RD Mailform -->
 						<form class='rd-mailform' method="post" action="" id="formMain">
@@ -97,7 +91,7 @@
 					        </div>
 					    </form>			    
 						<!-- END RD Mailform -->
-
+						<div id="messegeResult"></div>	
 					</div>
 				</div>
 			</div>
@@ -234,8 +228,8 @@
 	<footer>
 		<div class="container">
 			<p>Адреса: м. Київ, вул. Декабристів, 12/37<br>
-			e-mail: s.korotaev@lexp.com.ua<br>
-			тел.: (044) 563-94-19
+			e-mail: skypka@skypka.com.ua<br>
+			тел.: (067) 462-63-78
 			</p>
 			<div class="footer-brand">
 				<div class="footer-brand_name"><a href="#">Skypka.com.ua</a></div>

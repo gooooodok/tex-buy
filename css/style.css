@@ -499,9 +499,16 @@ footer {
   margin: 0;
 }
 
-#messegeResult{
+#messegeResultе{
         border-radius: 3px;
-
         background: #c5db34 no-repeat;
-        margin-bottom: 10px;
+}
+
+#messegeResult{
+  padding: 0px 10px 20px 10px ;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: #707068;
+  background: rgba(255, 255, 255, 0.8) no-repeat;
 }
