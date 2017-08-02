@@ -66,16 +66,36 @@
 			<!--	<h4>Наша компанія займається Скупкою різних Б/В товарів: побутова техніка, меблі, ручні будівельні інструменти, товари для риболовлі та відпочинку, спорт товари та багато іншого.<h4><br>  -->
 				<div class="row">
 					<div class="preffix_4 grid_4">
-						<h6>Що бажаєте продати?</h6>
-						<!-- RD Mailform -->
 						<div id="messegeResult">
-						 	Оставьте ваши контакты и наш консультант свяжется с вами 
-						</div>
-						<form method="post" action="" id="formMain">
-					        <input id="name" type="text" name="name" placeholder="Введите ваше имя" maxlength="30" autocomplete="off" />
-					        <input id="telephone" type="Tel" name="telephone" placeholder="Введите ваш телефон" maxlength="30" autocomplete="off"/>
-					        <input id="button" type="button"  value="Заказать обратный звонок" onclick="AjaxFormRequest('messegeResult', 'formMain', 'form.php')"/>
-					    </form>
+						 	Що бажаєте продати?
+						</div>	
+						<!-- RD Mailform -->
+						<form class='rd-mailform' method="post" action="" id="formMain">
+							<label data-add-placeholder>
+					        	<input id="texnika" type="text" name="texnika" placeholder="Вид техніки" maxlength="30" autocomplete="on" />
+					        </label>
+							<label data-add-placeholder>
+					        	<input id="brand" type="text" name="brand" placeholder="Бренд" maxlength="30" autocomplete="on" />
+					        </label>
+							<label data-add-placeholder>
+					        	<input id="model" type="text" name="model" placeholder="Модель" maxlength="30" autocomplete="on" />
+					        </label>					        
+							<label data-add-placeholder>
+					        	<input id="name" type="text" name="name" placeholder="Ваше ім'я" maxlength="30" autocomplete="on" />
+					        </label>
+					        <label data-add-placeholder>
+					        	<input id="email" type="text" name="email" placeholder="Ваш e-mail" maxlength="30" autocomplete="on" />
+					        </label>
+					        <label data-add-placeholder>
+					        	<input id="telephone" type="text" name="telephone" placeholder="Ваш телефон" maxlength="30" autocomplete="on"/>
+					        </label>
+							<label data-add-placeholder>
+								<textarea name="message" placeholder="Додатковий опис" autocomplete="on"></textarea>
+							</label>	
+					        <div class="mfControls btn-group">
+					        	<input class="btn" id="button" type="button"  value="Оцінити" onclick="AjaxFormRequest('messegeResult', 'formMain', 'form.php')"/>
+					        </div>
+					    </form>				    
 						<!-- END RD Mailform -->
 
 					</div>
@@ -205,7 +225,7 @@
 			<div class="container">
 			<h2>100% відповідь на вашу заявку</h2><br>
 			<p>Якщо у вас є запитання, ви можете зв'язатись з нами за телефоном:</p>
-			<h2>(067) 123-45-67</h2>
+			<h2>(067) 462-63-78</h2>
 			</div>
 		</section>
 	</main>
