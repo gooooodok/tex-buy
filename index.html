@@ -6,7 +6,7 @@
 	<meta name="format-detection" content="telephone=no"/>
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="css/grid.css?ver=1">
-	<link rel="stylesheet" href="css/style.css?ver=7">
+	<link rel="stylesheet" href="css/style.css?ver=8">
 	<link rel="stylesheet" href="css/rd-mailform.css">
 
 	<script src="js/jquery.js"></script>
@@ -24,6 +24,28 @@
 	<![endif]-->
 
 	<script src='js/device.min.js'></script>
+	<script>
+		 function AjaxFormRequest(result_id,formMain,url) {
+		 jQuery.ajax({
+		 url: url,
+		 type: "POST",
+		 dataType: "html",
+		 data: jQuery("#"+formMain).serialize(),
+		 success: function(response) {
+		 document.getElementById(result_id).innerHTML = response;
+		 },
+		 error: function(response) {
+		 document.getElementById(result_id).innerHTML = " Возникла ошибка при отправке формы. Попробуйте еще раз";
+		 }
+		 });
+		 
+		 $(':input','#formMain')
+		 .not(':button, :submit, :reset, :hidden')
+		 .val('')
+		 .removeAttr('checked')
+		 .removeAttr('selected');
+		 }
+	</script>
 </head>
 
 <body>
@@ -46,58 +68,14 @@
 					<div class="preffix_4 grid_4">
 						<h6>Що бажаєте продати?</h6>
 						<!-- RD Mailform -->
-						<form class='rd-mailform' method="post" action="bat/rd-mailform.php">
-							<!-- RD Mailform Type -->
-							<input type="hidden" name="form-type" value="contact"/>
-							<!-- END RD Mailform Type -->
-							<fieldset>
-
-								<label data-add-placeholder>
-									<input type="text"
-										   name="name"
-										   placeholder="Вид техніки"
-										   data-constraints="@NotEmpty @LettersOnly"/>
-								</label>
-
-								<label data-add-placeholder>
-									<input type="text"
-										   name="name"
-										   placeholder="Бренд, та модель"
-										   data-constraints="@NotEmpty @LettersOnly"/>
-								</label>							
-
-								<label data-add-placeholder>
-									<input type="text"
-										   name="name"
-										   placeholder="Ваше ім'я"
-										   data-constraints="@NotEmpty @LettersOnly"/>
-								</label>
-
-								<label data-add-placeholder>
-									<input type="text"
-										   name="email"
-										   placeholder="Ваш e-mail"
-										   data-constraints="@NotEmpty @Email"/>
-								</label>
-
-								<label data-add-placeholder>
-									<input type="text"
-										   name="phone"
-										   placeholder="Ваш телефон"
-										   data-constraints="@Phone"/>
-								</label>
-
-								<label data-add-placeholder>
-									<textarea placeholder="Додатковий опис"></textarea>
-								</label>								
-
-								<div class="mfControls btn-group">
-									<button class="btn" type="submit">Оцінити</button>
-								</div>
-								<div class="mfInfo"></div>
-							</fieldset>
-							<p class="text-center"><small>Наші спеціалісти оцінять дану техніку, та звяжутся з вами найближчим часом. </small></p>
-						</form>
+						<div id="messegeResult">
+						 	Оставьте ваши контакты и наш консультант свяжется с вами 
+						</div>
+						<form method="post" action="" id="formMain">
+					        <input id="name" type="text" name="name" placeholder="Введите ваше имя" maxlength="30" autocomplete="off" />
+					        <input id="telephone" type="Tel" name="telephone" placeholder="Введите ваш телефон" maxlength="30" autocomplete="off"/>
+					        <input id="button" type="button"  value="Заказать обратный звонок" onclick="AjaxFormRequest('messegeResult', 'formMain', 'form.php')"/>
+					    </form>
 						<!-- END RD Mailform -->
 
 					</div>
