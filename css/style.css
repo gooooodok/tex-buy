@@ -500,8 +500,8 @@ footer {
 }
 
 #messegeResultе{
-        border-radius: 3px;
-        background: #c5db34 no-repeat;
+  border-radius: 3px;
+  background: #c5db34 no-repeat;
 }
 
 #messegeResult{
@@ -511,4 +511,16 @@ footer {
   margin-right: auto;
   color: #707068;
   background: rgba(255, 255, 255, 0.8) no-repeat;
+}
+
+.spisok {
+  list-style-type: disc;
+  text-align: left;
+}
+
+.spisok_title {
+    text-align: left;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 0px 0px 10px 0px;
 }
