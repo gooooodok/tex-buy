@@ -1,10 +1,12 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Home</title>
+	<title>Скупка БУ техніки</title>
 	<meta charset="utf-8">
 	<meta name="format-detection" content="telephone=no"/>
-	<meta name="Keywords" content=""/>
+	<meta name="format-detection" content="address=no"/>
+	<meta name="description" content="Купим мобільні телефони, смартфони, телевізори, ноутбуки, інструменти, комп'ютери, монітори, кухонну техніку, велосипеди, авто товари, та багато іншого"/>
+	<meta name="Keywords" content="продать БУ технику, продать телефон, продать смартфон, продать ноут, продать старую технику"/>
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="css/grid.css?ver=1">
 	<link rel="stylesheet" href="css/style.css?ver=11">
@@ -36,7 +38,7 @@
 		 document.getElementById(result_id).innerHTML = response;
 		 },
 		 error: function(response) {
-		 document.getElementById(result_id).innerHTML = " Возникла ошибка при отправке формы. Попробуйте еще раз";
+		 document.getElementById(result_id).innerHTML = "Виникла помилка при відправці заявки. Попробуйте ще раз";
 		 }
 		 });
 		 }
@@ -64,7 +66,7 @@
 					<h6>Що бажаєте продати?</h6>
 
 						<!-- RD Mailform -->
-						<form class='rd-mailform' method="post" action="" id="formMain">
+						<form class='rd-mailform' method="post" action="" id="formMain" onsubmit='return validate(this);'>
 							<label data-add-placeholder>
 					        	<input id="texnika" type="text" name="texnika" placeholder="Вид техніки" maxlength="30" autocomplete="on" />
 					        </label>
@@ -78,16 +80,16 @@
 					        	<input id="name" type="text" name="name" placeholder="Ваше ім'я" maxlength="30" autocomplete="on" />
 					        </label>
 					        <label data-add-placeholder>
-					        	<input id="email" type="text" name="email" placeholder="Ваш e-mail" maxlength="30" autocomplete="on" />
+					        	<input id="email" type="text" name="email" placeholder="Ваш e-mail" maxlength="30" autocomplete="on" data-constraints="@NotEmpty @Email" />
 					        </label>
 					        <label data-add-placeholder>
 					        	<input id="telephone" type="text" name="telephone" placeholder="Ваш телефон" maxlength="30" autocomplete="on"/>
 					        </label>
 							<label data-add-placeholder>
-								<textarea name="message" placeholder="Додатковий опис" autocomplete="on"></textarea>
+								<textarea id='form_about' name="message" placeholder="Додатковий опис" autocomplete="on"></textarea>
 							</label>	
 					        <div class="mfControls btn-group">
-					        	<input class="btn" id="button" type="button"  value="Оцінити" onclick="AjaxFormRequest('messegeResult', 'formMain', 'form.php')"/>
+					        	<input class="btn" id="button" type="submit"  value="Оцінити" onclick="AjaxFormRequest('messegeResult', 'formMain', 'feedback/form.php')"/>
 					        </div>
 					    </form>			    
 						<!-- END RD Mailform -->
@@ -229,7 +231,7 @@
 		<div class="container">
 			<p>Адреса: м. Київ, вул. Декабристів, 12/37<br>
 			e-mail: skypka@skypka.com.ua<br>
-			тел.: (067) 462-63-78
+			тел.: (044) 563-94-19
 			</p>
 			<div class="footer-brand">
 				<div class="footer-brand_name"><a href="#">Skypka.com.ua</a></div>
