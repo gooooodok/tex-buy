@@ -220,7 +220,7 @@ q + .img {
 }
 .parallax01 {
   background-color: #FFF;
-  background-image: url(../images/texnika_fon_14.jpg);
+  background-image: url(../images/texnika_fon_16.jpg);
   padding: 210px 0 187px;
 }
 @media (max-width: 767px) {
@@ -408,10 +408,10 @@ header * + .row {
   padding: 0 0 4px;
 }
 .brand_slogan {
-  font-size: 12px;
-  line-height: 30px;
+  font-size: 10px;
+  line-height: 25px;
   font-weight: 300;
-  letter-spacing: 10px;
+  letter-spacing: 8px;
   text-transform: uppercase;
   color: #909086;
   margin: 0;
@@ -511,16 +511,4 @@ footer {
   margin-right: auto;
   color: #707068;
   background: rgba(255, 255, 255, 0.8) no-repeat;
-}
-
-.spisok {
-  list-style-type: disc;
-  text-align: left;
-}
-
-.spisok_title {
-    text-align: left;
-    font-weight: 500;
-    font-size: 20px;
-    padding: 0px 0px 10px 0px;
 }
