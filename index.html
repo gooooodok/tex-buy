@@ -66,29 +66,22 @@
 
 						<!-- RD Mailform -->
 						<form class='rd-mailform' method="post" action="" id="formMain" onsubmit='return validate(this);'>
-<!-- 							<label data-add-placeholder>Виберыть вид техніки
-							<select name="nubexSelect" size="2">
-								<option value="tel">Телефон чи смартфон</option>
-								<option value="nout">Ноутбук</option>
-								<option value="drel">Дрель</option>
-								<option value="velo">Велосипед</option>
-							</select>
-							</label> -->
+
+					
 							<label data-add-placeholder>
-					        	<input list="texnika" placeholder="Вид техніки" type="text" name="texnika" autocomplete="off"/>
+					        	<input list="texnika" placeholder="Виберыть категорію" type="text" name="texnika" autocomplete="off"/>
 						        	<datalist id="texnika">
-									<option id="tel">Телефон чи смартфон</option>
-									<option id="nout">Ноутбук</option>
-									<option id="drel">Дрель</option>
-									<option id="velo">Велосипед</option>
+									<option>Телефони та смартфони</option>
+									<option>Ноутбуки та комп’ютери</option>
+									<option>Інструменти</option>
+									<option>Побутова техніка</option>
+									<option>Фото - Відео - Аудіо техніка</option>
+									<option>Дитячі товари</option>
 								</datalist> 
 					        </label>
-							<label data-add-placeholder>
+<!-- 						<label data-add-placeholder>
 					        	<input id="texnika" type="text" name="texnika" placeholder="Вид техніки" maxlength="30" autocomplete="on" />
-					        </label>
-							<label data-add-placeholder>
-					        	<input id="texnika" type="text" name="texnika" placeholder="Вид техніки" maxlength="30" autocomplete="on" />
-					        </label>
+					        </label> -->
 							<label data-add-placeholder>
 					        	<input id="brand" type="text" name="brand" placeholder="Бренд" maxlength="30" autocomplete="on" />
 					        </label>
@@ -99,7 +92,7 @@
 					        	<input id="name" type="text" name="name" placeholder="Ваше ім'я" maxlength="30" autocomplete="on" />
 					        </label>
 					        <label data-add-placeholder>
-					        	<input id="email" type="text" name="email" placeholder="Ваш e-mail" maxlength="30" autocomplete="on" data-constraints="@NotEmpty @Email" />
+					        	<input id="email" type="text" name="email" placeholder="Ваш e-mail" maxlength="30" autocomplete="on" />
 					        </label>
 					        <label data-add-placeholder>
 					        	<input id="telephone" type="text" name="telephone" placeholder="Ваш телефон" maxlength="30" autocomplete="on"/>
