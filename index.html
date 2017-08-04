@@ -66,6 +66,26 @@
 
 						<!-- RD Mailform -->
 						<form class='rd-mailform' method="post" action="" id="formMain" onsubmit='return validate(this);'>
+<!-- 							<label data-add-placeholder>Виберыть вид техніки
+							<select name="nubexSelect" size="2">
+								<option value="tel">Телефон чи смартфон</option>
+								<option value="nout">Ноутбук</option>
+								<option value="drel">Дрель</option>
+								<option value="velo">Велосипед</option>
+							</select>
+							</label> -->
+							<label data-add-placeholder>
+					        	<input list="texnika" placeholder="Вид техніки" type="text" name="texnika" autocomplete="off"/>
+						        	<datalist id="texnika">
+									<option id="tel">Телефон чи смартфон</option>
+									<option id="nout">Ноутбук</option>
+									<option id="drel">Дрель</option>
+									<option id="velo">Велосипед</option>
+								</datalist> 
+					        </label>
+							<label data-add-placeholder>
+					        	<input id="texnika" type="text" name="texnika" placeholder="Вид техніки" maxlength="30" autocomplete="on" />
+					        </label>
 							<label data-add-placeholder>
 					        	<input id="texnika" type="text" name="texnika" placeholder="Вид техніки" maxlength="30" autocomplete="on" />
 					        </label>
