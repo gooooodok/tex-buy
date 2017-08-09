@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>Скупка БУ техніки</title>
@@ -11,38 +11,10 @@
 	<link rel="stylesheet" href="css/grid.css?ver=1">
 	<link rel="stylesheet" href="css/style.css?ver=16">
 	<link rel="stylesheet" href="css/rd-mailform.css">
-
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery-migrate-1.2.1.js"></script>
-
-	<!--[if lt IE 9]>
-	<html class="lt-ie9">
-	<div style=' clear: both; text-align:center; position: relative;'>
-		<a href="http://windows.microsoft.com/en-US/internet-explorer/..">
-			<img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820"
-					 alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/>
-		</a>
-	</div>
-	<script src="js/html5shiv.js"></script>
-	<![endif]-->
-
 	<script src='js/device.min.js'></script>
-	<script>
-		 function AjaxFormRequest(result_id,formMain,url) {
-		 jQuery.ajax({
-		 url: url,
-		 type: "POST",
-		 dataType: "html",
-		 data: jQuery("#"+formMain).serialize(),
-		 success: function(response) {
-		 document.getElementById(result_id).innerHTML = response;
-		 },
-		 error: function(response) {
-		 document.getElementById(result_id).innerHTML = "Виникла помилка при відправці заявки. Попробуйте ще раз";
-		 }
-		 });
-		 }
-	</script>
+	<script src='js/form.js'></script>
 </head>
 
 <body>
@@ -62,46 +34,39 @@
 				<h2>Купимо вашу техніку</h2><br>
 				<div class="row">
 					<div class="preffix_4 grid_4">
-					<!-- <h6>Що бажаєте продати?</h6> -->
+					<h6>Що бажаєте продати?</h6>
 
 						<!-- RD Mailform -->
-					    <div class="spisok">
-						    <span>Виберіть категорію: </span>
-						    <select class='spisok_okno' name="texnika" form="formMain">
-						        <option value="Телефон">Телефони, та смартфони</option>
-						        <option value="Комп'ютер">Ноутбуки, та комп’ютери</option>
-						        <option value="Інструмент">Інструменти</option>
-						    </select>
-						</div>	
-						<br>
-						<form class='rd-mailform' method="post" action="" id="formMain">
-<!-- 							<label data-add-placeholder>
-					        	<input id="texnika" type="text" name="texnika" placeholder="Вид техніки" maxlength="30" autocomplete="on" />
-					        </label> -->
-							<label data-add-placeholder>
-					        	<input id="brand" type="text" name="brand" placeholder="Бренд" maxlength="30" autocomplete="on" />
+						<form class='rd-mailform' method="post" action="" id="formMain"'>
+							<label>
+					        	<input id="texnika" type="text" name="texnika" placeholder="Вид техніки *" maxlength="30" autocomplete="on" /> <div class="cursiv">Наприклад: мобільний телефон</div>
 					        </label>
-							<label data-add-placeholder>
-					        	<input id="model" type="text" name="model" placeholder="Модель" maxlength="30" autocomplete="on" />
-					        </label>					        
-							<label data-add-placeholder>
+							<label>
+					        	<input id="brand" type="text" name="brand" placeholder="Бренд *" maxlength="30" autocomplete="on" />
+					        </label>
+							<label>
+					        	<input id="model" type="text" name="model" placeholder="Модель *" maxlength="30" autocomplete="on" />
+					        </label>
+					        <label>
+					        	<input id="email" type="email" name="email" placeholder="Ваш e-mail *" maxlength="30" autocomplete="on" />
+					        </label>
+					        <label>
 					        	<input id="name" type="text" name="name" placeholder="Ваше ім'я" maxlength="30" autocomplete="on" />
 					        </label>
-					        <label data-add-placeholder>
-					        	<input id="email" type="text" name="email" placeholder="Ваш e-mail" maxlength="30" autocomplete="on" />
-					        </label>
-					        <label data-add-placeholder>
+					        <label>
 					        	<input id="telephone" type="text" name="telephone" placeholder="Ваш телефон" maxlength="30" autocomplete="on"/>
 					        </label>
-							<label data-add-placeholder>
-								<textarea id='form_about' name="message" placeholder="Додатковий опис" autocomplete="on"></textarea>
+							<label>
+								<textarea id='form_about' name="message" placeholder="Додатковий опис техніки" autocomplete="on"></textarea>
 							</label>
+							<span class="cursiv">* Обовяскові поля</span>
 					        <div class="mfControls btn-group">
 					        	<input class="btn" id="button" type="submit"  value="Оцінити" onclick="AjaxFormRequest('messegeResult', 'formMain', 'feedback/form.php')"/>
 					        </div>
-					    </form>	    
+
+					    </form>
 						<!-- END RD Mailform -->
-						<div id="messegeResult"></div>	
+						<div id="messegeResult"></div>
 					</div>
 				</div>
 			</div>
@@ -130,11 +95,11 @@
 					<div class="grid_4">
 						<img src="/images/3.png">
 						<h3>Максимально швидко відповімо</h3>
-						<p>Ми звяжимося з вами по указаному в заявці телефоні, або e-mail.</p>
+						<p>Ми зв'яжемося з вами за вказаними у заявці  телефоні, або e-mail.</p>
 					</div>
 				</div>
 			</div>
-		</section> 
+		</section>
 
 		<section class="well well__02 bg-2 shadow">
 			<div class="container">
@@ -152,17 +117,17 @@
 				<div class="row offset02">
 					<div class="grid_6 left">
 						<h4>Побутову техніку</h4>
-						<p>Холодильники, Пральні машини, Кондиціонери, Мультиварки, Пилососи, Електро-водо нагрівачі, Морозильні камери, Вбудовані духові шафи, Конвектори, Витяжки, Плити, Посудомийні машини, Мікрохвильові печі, Блендери, Праски, Варильні поверхні, Швейна техніка, М'ясорубки, Кавоварки, Електрочайники, Вентилятори, Зволожувачі повітря, Радіатори опалення.</p>
+						<p>Холодильники, Пральні машини, Кондиціонери, Мультиварки, Пилососи, Електро-водо нагрівачі, Морозильні камери, Духові шафи, Конвектори, Витяжки, Плити, Посудомийні машини, Мікрохвильові печі, Блендери, Праски, Варильні поверхні, Швейна техніка, М'ясорубки, Кавоварки, Електрочайники, Вентилятори, Зволожувачі повітря, Радіатори опалення.</p>
 					</div>
 					<div class="grid_6 left">
-						<h4>Телефони, та смартфони</h4>
-						<p>Мобільні телефони, Смартфони, Планшети, Навушники, Карти пам'яті, Електронні книги, Моноподи для селфі, Офісні телефони, Зарядні пристрої, Аксесуари.</p>
+						<h4>Фото - Відео - Аудіо техніку</h4>
+						<p>Телевізори, Фотоаппарати, Об'єктиви, MP3-плеєри, Домашні кінотеатри, Музичні центри та магнітоли, Blu-ray/DVD/HD/-медіаплеєри, Акустичні системи, Відеокамери, Фоторамки, Навушники, Проектори, Мікшери, Мікрофони.</p>
 					</div>
 				</div>
 				<div class="row offset02">
 					<div class="grid_6 left">
-						<h4>Фото - Відео - Аудіо техніку</h4>
-						<p>Телевізори, Фотоаппарати, Об'єктиви, MP3-плеєри, Домашні кінотеатри, Музичні центри та магнітоли, Blu-ray/DVD/HD/-медіаплеєри, Акустика, Відеокамери, Фоторамки, Навушники, Проектори, Мікшери.</p>
+						<h4>Телефони, та смартфони</h4>
+						<p>Мобільні телефони, Смартфони, Планшети, Навушники, Карти пам'яті, Електронні книги, Моноподи для селфі, Офісні телефони, Зарядні пристрої, Аксесуари.</p>
 					</div>
 					<div class="grid_6 left">
 						<h4>Спорт, та відпочинок</h4>

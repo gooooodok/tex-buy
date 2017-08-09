@@ -1,7 +1,37 @@
 <?php
 
-if($_POST)
-    {
+if (empty($_POST['texnika'])) {
+    echo "Ви не вказали вид техніки";
+    return false;
+}
+
+elseif (empty($_POST['brand'])) {
+    echo "Ви не вказали бренд";
+    return false;
+}
+
+elseif (empty($_POST['model'])) {
+    echo "Ви не вказали модель";
+    return false;
+}
+
+elseif (empty($_POST['email'])) {
+    echo "Вкажіть ваш email";
+    return false;
+}
+
+else {
+        $email = $_POST['email'];
+        $validation = filter_var($email, FILTER_VALIDATE_EMAIL);
+
+        if ($validation){
+
+        }
+        else {
+            echo "Не вірно вказаний email";
+            return false;
+        }
+
         $to = "zagraychuk@gmail.com"; //куда отправлять письмо
         $subject = "Заявка на оцінку техніки"; //тема
 
