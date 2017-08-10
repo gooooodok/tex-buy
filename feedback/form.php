@@ -1,22 +1,22 @@
 <?php
 
 if (empty($_POST['texnika'])) {
-    echo "Ви не вказали вид техніки";
+    // echo "Ви не вказали вид техніки";
     return false;
 }
 
 elseif (empty($_POST['brand'])) {
-    echo "Ви не вказали бренд";
+    // echo "Ви не вказали бренд";
     return false;
 }
 
 elseif (empty($_POST['model'])) {
-    echo "Ви не вказали модель";
+    // echo "Ви не вказали модель";
     return false;
 }
 
 elseif (empty($_POST['email'])) {
-    echo "Вкажіть ваш email";
+    // echo "Вкажіть ваш email";
     return false;
 }
 
@@ -33,14 +33,14 @@ else {
         }
 
         $to = "skypka@skypka.com.ua";
-        $subject = "Заявка на оцінку техніки";
+        $subject = "Skypka.com.ua";
 
         $message =  "Вид техніки: <b>" . $_POST['texnika'] . 
                     "</b>; <br>Бренд: <b>" . $_POST['brand'] .
-                    "</b>; <br>Модель: <b>" . $_POST['model'] . 
+                    "</b>; <br>Модель: <b>" . $_POST['model'] .
+                    "</b>; <br>E-mail: <b>" . $_POST['email'] .  
                     "</b>; <br>Им'я: <b>" . $_POST['name'] . 
                     "</b>; <br>Телефон: <b>" . $_POST['telephone'] . 
-                    "</b>; <br>E-mail: <b>" . $_POST['email'] . 
                     "</b>; <br>Додатковий опис: <b>" . $_POST['message'] . "</b>.";
 
         $from = strip_tags($_POST['email']);
@@ -49,7 +49,7 @@ else {
         $result = mail($to, $subject, $message, $headers);
      
         if ($result) {
-            echo "Заявка успішно відправлена. Наші спеціалісти звяжутся з вами найближчим часом.";
+            echo "Заявка відправлена. Ми зв'яжимось з вами найближчим часом.";
         }
     }
 

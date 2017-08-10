@@ -9,7 +9,7 @@
 	<meta name="Keywords" content="продать БУ технику, продать телефон, продать смартфон, продать ноут, продать старую технику"/>
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="css/grid.css?ver=1">
-	<link rel="stylesheet" href="css/style.css?ver=16">
+	<link rel="stylesheet" href="css/style.css?ver=18">
 	<link rel="stylesheet" href="css/rd-mailform.css">
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery-migrate-1.2.1.js"></script>
@@ -38,27 +38,28 @@
 
 						<form class='rd-mailform' method="post" action="" id="formMain"'>
 							<label>
-					        	<input id="texnika" type="text" name="texnika" placeholder="Вид техніки *" maxlength="30" autocomplete="on" /> <div class="vinoski">Наприклад: мобільний телефон</div>
+					        	<input title="Вид техніки" id="texnika" type="text" name="texnika" placeholder="Вид техніки *" maxlength="30" autocomplete="on" required oninvalid="this.setCustomValidity('Вкажіть вид техніки')" oninput="setCustomValidity('')"/>
+					        	<div class="vinoski">Наприклад: мобільний телефон</div>
 					        </label>
 							<label>
-					        	<input id="brand" type="text" name="brand" placeholder="Бренд *" maxlength="30" autocomplete="on" />
+					        	<input title="Бренд" id="brand" type="text" name="brand" placeholder="Бренд *" maxlength="30" autocomplete="on" required oninvalid="this.setCustomValidity('Вкажіть бренд')" oninput="setCustomValidity('')"/>
 					        </label>
 							<label>
-					        	<input id="model" type="text" name="model" placeholder="Модель *" maxlength="30" autocomplete="on" />
+					        	<input title="Модель" id="model" type="text" name="model" placeholder="Модель *" maxlength="30" autocomplete="on" required oninvalid="this.setCustomValidity('Вкажіть модель')" oninput="setCustomValidity('')"/>
 					        </label>
 					        <label>
-					        	<input id="email" type="email" name="email" placeholder="Ваш e-mail *" maxlength="30" autocomplete="on" />
+					        	<input title="Ваш e-mail" id="email" type="email" name="email" placeholder="Ваш e-mail *" maxlength="30" autocomplete="on" required oninvalid="this.setCustomValidity('Вкажіть ваш e-mail')" oninput="setCustomValidity('')"/>
 					        </label>
 					        <label>
-					        	<input id="name" type="text" name="name" placeholder="Ваше ім'я" maxlength="30" autocomplete="on" />
+					        	<input title="Ваше ім'я" id="name" type="text" name="name" placeholder="Ваше ім'я" maxlength="30" autocomplete="on" />
 					        </label>
 					        <label>
-					        	<input id="telephone" type="text" name="telephone" placeholder="Ваш телефон" maxlength="30" autocomplete="on"/>
+					        	<input title="Ваш телефон" id="telephone" type="text" name="telephone" placeholder="Ваш телефон" maxlength="30" autocomplete="on"/>
 					        </label>
 							<label>
-								<textarea id='form_about' name="message" placeholder="Додатковий опис техніки" autocomplete="on"></textarea>
+								<textarea title="Додатковий опис техніки" id='form_about' name="message" placeholder="Додатковий опис техніки" autocomplete="on"></textarea>
 							</label>
-							<span class="vinoski">* Обовяскові поля</span>
+							<span class="vinoski">* Обов'язкові поля</span>
 					        <div class="mfControls btn-group">
 					        	<input class="btn" id="button" type="submit"  value="Оцінити" onclick="AjaxFormRequest('messegeResult', 'formMain', 'feedback/form.php')"/>
 					        </div>

@@ -8,7 +8,7 @@ function AjaxFormRequest(result_id,formMain,url) {
          document.getElementById(result_id).innerHTML = response;
       },
       error: function(response) {
-         document.getElementById(result_id).innerHTML = "Возникла ошибка при отправке формы. Попробуйте еще раз";
+         document.getElementById(result_id).innerHTML = "Виникла помилка при відправці форм. Попробуйте ще раз пізніше";
       }
    });
 }
