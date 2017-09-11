@@ -32,7 +32,7 @@ else {
             return false;
         }
 
-        $to = "skypka@skypka.com.ua";
+        $to = "zagraychuk@gmail.com";
         $subject = "Skypka.com.ua";
 
         $message =  "Вид техніки: <b>" . $_POST['texnika'] . 

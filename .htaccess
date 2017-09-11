@@ -1,0 +1,12 @@
+RewriteEngine on
+Options +SymLinksIfOwnerMatch
+RewriteRule ^index.html$ / [QSA,R]
+
+RewriteRule ^.htaccess$ - [F]
+RewriteCond %{QUERY_STRING} (cat|p)=(.*)$
+RewriteRule ^(.*) /? [R=301,L]
+
+<IfModule mod_rewrite.c>
+RewriteCond %{HTTP_HOST} ^www\.skypka\.com\.ua$ [NC]
+RewriteRule ^(.*)$ http://skypka.com.ua/$1 [R=301,L]
+</IfModule>
